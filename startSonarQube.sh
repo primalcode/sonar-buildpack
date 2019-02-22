@@ -22,6 +22,8 @@ wget https://github.com/primalcode/sonar-buildpack/blob/master/ojdbc8-12.2.0.1.j
 
 echo "# pwd ############"
 pwd
+echo "# ls -la ############"
+ls -la
 echo "# cp ############"
 cp ojdbc8-12.2.0.1.jar /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ojdbc8.jar
 echo "# ls /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ ############"
