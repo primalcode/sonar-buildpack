@@ -19,7 +19,13 @@ mv ./sonar_replaced.properties ./sonar.properties
 echo "------------------------------------------------------" > /home/vcap/app/sonarqube/logs/sonar.log
 
 wget https://github.com/primalcode/sonar-buildpack/blob/master/ojdbc8-12.2.0.1.jar
+
+echo "# pwd ############"
+pwd
+echo "# cp ############"
 cp ojdbc8-12.2.0.1.jar /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ojdbc8.jar
+echo "# ls /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ ############"
+ls -la /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/
 
 echo "-----> Starting SonarQube"
 
