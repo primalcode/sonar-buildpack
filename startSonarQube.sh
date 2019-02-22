@@ -4,9 +4,9 @@ echo "-----> Making java available"
 export PATH=$PATH:/home/vcap/app/.java/bin
 
 echo "-----> Setting sonar.properties"
-echo "       sonar.web.port=80"
+echo "       sonar.web.port=${PORT}"
 echo "\n ------- The following properties were automatically created by the buildpack -----\n" >> ./sonar.properties
-echo "sonar.web.port=80\n" >> ./sonar.properties
+echo "sonar.web.port=${PORT}\n" >> ./sonar.properties
 
 # Replace all environment variables with syntax ${MY_ENV_VAR} with the value
 # thanks to https://stackoverflow.com/questions/5274343/replacing-environment-variables-in-a-properties-file
