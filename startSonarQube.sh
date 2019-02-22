@@ -18,11 +18,8 @@ mv ./sonar_replaced.properties ./sonar.properties
 
 echo "------------------------------------------------------" > /home/vcap/app/sonarqube/logs/sonar.log
 
-wget http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar
-wget --no-check-certificate -q -c \
-        --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar
-cp ojdbc7.jar /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ojdbc7.jar
+wget https://github.com/primalcode/sonar-buildpack/blob/master/ojdbc8-12.2.0.1.jar
+cp ojdbc8-12.2.0.1.jar /home/vcap/app/sonarqube/extensions/jdbc-driver/oracle/ojdbc8.jar
 
 echo "-----> Starting SonarQube"
 
